@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "A simple CLI to add fixtures to your Kuzzle server. Uses Faker under the hood.",
   "main": "index.js",
+  "bin": {
+    "kuzzle-fixtures": ".bin/kuzzle-fixtures"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">= 8.12.0"
   },
   "author": "Luca Marchesini <xbill82@gmail.com>",
   "repository": {
