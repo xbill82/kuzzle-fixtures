@@ -9,14 +9,14 @@ const version = require("./package.json").version;
 const main = async () => {
   program
     .version(version)
-    .option("-h, --host [name]", "Kuzzle hostname (default: localhost)")
+    .option("-h, --host <name>", "Kuzzle hostname (default: localhost)")
     .option("-p, --port <port>", "Kuzzle port (default: 7512)", parseInt)
     .option(
-      "-i, --index [name]",
+      "-i, --index <name>",
       "The name of the index to create (default: testindex)"
     )
     .option(
-      "-c, --collection [name]",
+      "-c, --collection <name>",
       "The name of the collection to create (default: testcollection)"
     )
     .option(
@@ -25,7 +25,7 @@ const main = async () => {
       parseInt
     )
     .option(
-      "-m, --mapping [path]",
+      "-m, --mapping <path>",
       "The path to a file containing the mapping for the collection"
     )
     .parse(process.argv);
