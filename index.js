@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const KuzzleSDK = require("kuzzle-sdk");
 const axios = require("axios");
 const faker = require("faker");

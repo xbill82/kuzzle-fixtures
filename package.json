@@ -1,10 +1,10 @@
 {
   "name": "kuzzle-fixtures",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple CLI to add fixtures to your Kuzzle server. Uses Faker under the hood.",
   "main": "index.js",
   "bin": {
-    "kuzzle-fixtures": ".bin/kuzzle-fixtures"
+    "kuzzle-fixtures": "./index.js"
   },
   "scripts": {
     "start": "node index.js"
