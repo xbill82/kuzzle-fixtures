@@ -1,5 +1,10 @@
+dist: trusty
+
 deploy:
   provider: npm
   email: xbill82@gmail.com
   api_key:
     secure: qH1NJMDWdY0yF5PVKWerdjIdz8qwPWeSvh1eWjIs56gBQYFu9TpTcSDfVpN4ZSUSIYkzjq2z9sES6wd4FJFykySkNDpd9SQahDP+cnrbMX7fZGtp0RaWwcAErnqe6rsjjZvQs/FZQlaVM7vVb51RPqAAJYfSGfV3E6cgWLTdR2w6FJ0bxXF4I3xkTlZszU0uY0gVFWMjPiaPfr8cnkvhFk2EE4QO8QKuuxNoF8bBqFSWKz15mEA5PHtTNfhqqEoB4NQTNtMySHx8DpD2oysYChwKPiFDBRDQufQxB3vPOZFnDDFjy0T2g0g96+ARzqknewlfAWj9iTHe+Mso97kPlljkPO+m/MToIk7/JlyhXUMAfkDA14YCZFBYwnMPeA/pX0XSPNVqyLCOEv9iH2LFSk1852RhsZx0d/b/ZcM+jyqV+GLW2WaK9+NtbtCgUIA2DtssPZe8otf2uqZQwNgEoGN/zk4ePBEqRnDrx/T76Z1+jYTaqiX6xKQEFsSV4RvTsGg+gtUtQZFhLvTDyaIlwDy0IKH+RCMQwHR9lb70DtBbo5IpRLrNL9BtbaNMiGaxh1rpQPAoMpIypBIg5r/ouxlfo2ep/peCa595MbLPPIVD95KP9cqOBclz+fsCwYR2Csax5RCRGfnnu/oHJMWDzcSQK9El6uhNUHdtJDUGjMM=
+  on:
+    repo: xbill82/kuzzle-fixtures
+    branch: master
