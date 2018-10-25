@@ -28,6 +28,7 @@ const main = async () => {
       "-m, --mapping <path>",
       "The path to a file containing the mapping for the collection"
     )
+    .option('-r --reset', 'Completely reset the database')
     .parse(process.argv);
 
   const host = program.host || "localhost";
@@ -37,8 +38,10 @@ const main = async () => {
   const items = program.items || 100;
   const mappingPath = program.mapping || null;
 
-  console.log("Resetting database...");
-  await axios.default.post(`http://${host}:${port}/admin/_resetDatabase`);
+  if (program.reset) {
+    console.log("Resetting database...");
+    await axios.default.post(`http://${host}:${port}/admin/_resetDatabase`);
+  }
 
   const kuzzle = new KuzzleSDK.Kuzzle("websocket", {
     host: host,
