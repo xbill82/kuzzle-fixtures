@@ -3,6 +3,7 @@
 const KuzzleSDK = require("kuzzle-sdk");
 const axios = require("axios");
 const faker = require("faker");
+const path = require('path')
 const program = require("commander");
 const version = require("./package.json").version;
 
@@ -36,7 +37,7 @@ const main = async () => {
   const collection = program.collection || "testcollection";
   const index = program.index || "testindex";
   const items = program.items || 100;
-  const mappingPath = program.mapping || null;
+  let mappingPath = path.join(program.mapping) || null;
 
   if (program.reset) {
     console.log("Resetting database...");
@@ -57,6 +58,9 @@ const main = async () => {
 
   if (mappingPath) {
     console.log("Loading Mapping...");
+    if (!path.isAbsolute(mappingPath)) {
+      mappingPath = path.join(process.cwd(), mappingPath)
+    }
     mapping = require(mappingPath);
   }
 
